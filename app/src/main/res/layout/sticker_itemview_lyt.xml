@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DCD5D5"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="2dp"
+        android:id="@+id/category_tv"
+        android:layout_margin="4dp"
+        />
+
+<!--    image layout in horizontal manner under verticle layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#E8E2E2">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/stk_img1"
+            android:src="@drawable/ic_baseline_sentiment_satisfied_alt_24"
+
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/stk_img2"
+            android:src="@drawable/ic_baseline_sentiment_satisfied_alt_24"
+
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/stk_img3"
+            android:src="@drawable/ic_baseline_sentiment_satisfied_alt_24"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -6,13 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainScreen">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Main Screen"
-        android:textStyle="bold"
-        android:textSize="45sp"
-        android:layout_centerInParent="true"
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_sticker_list"
+
         />
 
 </RelativeLayout>
