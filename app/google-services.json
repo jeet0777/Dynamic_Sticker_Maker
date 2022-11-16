@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "574017978780",
+    "project_id": "dynamic-sticker-maker",
+    "storage_bucket": "dynamic-sticker-maker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574017978780:android:7162d0112956846c380859",
+        "android_client_info": {
+          "package_name": "com.android.dynamic_sticker_maker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574017978780-ja7pgiovsrro7bfcl3ba7nup4c9ohf9d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM6icgG_2wYU3LrgsCe7IyhURVzWXYEy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574017978780-ja7pgiovsrro7bfcl3ba7nup4c9ohf9d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
