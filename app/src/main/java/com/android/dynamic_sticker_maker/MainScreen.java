@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.Model.StickerListing;
 import com.android.dynamic_sticker_maker.Adapter.StickerAdapter;
@@ -19,23 +20,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainScreen extends AppCompatActivity {
-RecyclerView rv;
-List<StickerListing> stickerListingList;
+    RecyclerView rv;
+    List<StickerListing> stickerListingList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
-    rv=findViewById(R.id.rv_sticker_list);
-stickerListingList=new ArrayList<>();
+        rv=findViewById(R.id.rv_sticker_list);
+       stickerListingList=new ArrayList<>();
 
         StorageReference folderref= FirebaseStorage.getInstance().getReference("/");
-folderref.listAll().addOnSuccessListener(new OnSuccessListener<ListResult>() {
-    @Override
-    public void onSuccess(ListResult listResult) {
-
-
+        folderref.listAll().addOnSuccessListener(new OnSuccessListener<ListResult>() {
+        @Override
+        public void onSuccess(ListResult listResult) {
         for (StorageReference prefix : listResult.getPrefixes()) {
-Log.d("TAG333",prefix.getName());
+        Log.d("TAG333",prefix.getName());
         stickerListingList.add(new StickerListing(
                 R.drawable.ic_baseline_sentiment_satisfied_alt_24,
                 prefix.getName()
@@ -44,6 +43,7 @@ Log.d("TAG333",prefix.getName());
    }
         for (StorageReference item : listResult.getItems()) {
             // All the items under the folder would here available.
+            Toast.makeText(MainScreen.this,,Toast.LENGTH_LONG).show();
 
         }
 

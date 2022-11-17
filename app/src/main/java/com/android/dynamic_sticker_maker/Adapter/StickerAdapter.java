@@ -27,8 +27,7 @@ public class StickerAdapter extends RecyclerView.Adapter<StickerAdapter.Viewhold
 
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View listItem= layoutInflater.inflate(R.layout.sticker_itemview_lyt, parent, false);
-        Viewholder viewHolder = new Viewholder(listItem);
-        return viewHolder;
+        return new Viewholder(listItem);
 
     }
 
@@ -46,7 +45,8 @@ public class StickerAdapter extends RecyclerView.Adapter<StickerAdapter.Viewhold
 
     }
 
-    public class Viewholder extends RecyclerView.ViewHolder {
+    public static class Viewholder extends RecyclerView.ViewHolder {
+
         public ImageView imageView;
         public ImageView imageView2;
         public ImageView imageView3;
