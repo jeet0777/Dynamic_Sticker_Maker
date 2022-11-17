@@ -4,17 +4,12 @@ import android.graphics.Bitmap;
 import android.widget.ImageView;
 
 public class StickerListing {
-    private Object stk_imageview;
-    private String Category;
+    private final String Category;
 
-    public StickerListing(Object stk_imageview, String category) {
-        this.stk_imageview = stk_imageview;
+    public StickerListing(String category) {
         Category = category;
     }
 
-    public Object getStk_imageview() {
-        return stk_imageview;
-    }
 
     public String getCategory() {
         return Category;

@@ -1,13 +1,17 @@
 package com.android.dynamic_sticker_maker.Adapter;
 
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.Model.ImageList;
 import com.android.Model.StickerListing;
 import com.android.dynamic_sticker_maker.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -16,8 +20,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class StickerAdapter extends RecyclerView.Adapter<StickerAdapter.Viewholder> {
     List<StickerListing> list;
-    public StickerAdapter(List<StickerListing> stickerListingList) {
+    List<ImageList> imgList;
+    int counter = 0;
+    public StickerAdapter(List<StickerListing> stickerListingList,List<ImageList> imgList) {
         this.list=stickerListingList;
+        this.imgList = imgList;
     }
 
     @NonNull
@@ -34,7 +41,10 @@ public class StickerAdapter extends RecyclerView.Adapter<StickerAdapter.Viewhold
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
     StickerListing stickerListing=list.get(position);
-    holder.imageView.setImageResource(R.drawable.ic_baseline_sentiment_satisfied_alt_24);
+   Picasso.get().load(String.valueOf(imgList.get(position).getImagePath())).into(holder.imageView);
+   Picasso.get().load(String.valueOf(imgList.get(position).getImagePath())).into(holder.imageView2);
+   Picasso.get().load(String.valueOf(imgList.get(position).getImagePath())).into(holder.imageView3);
+
     holder.textView.setText(stickerListing.getCategory());
 
     }
