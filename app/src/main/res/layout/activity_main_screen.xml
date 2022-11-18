@@ -8,9 +8,17 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="800sp"
         android:id="@+id/rv_sticker_list"
 
         />
+
+    <ImageView
+        android:layout_below="@+id/rv_sticker_list"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:src="@mipmap/ic_launcher_round"
+        android:id="@+id/tempImage"/>
+
 
 </RelativeLayout>
