@@ -20,9 +20,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class StickerAdapter extends RecyclerView.Adapter<StickerAdapter.Viewholder> {
     List<StickerListing> list;
-    List<ImageList> imgList;
+    List<List<ImageList>> imgList;
     int counter = 0;
-    public StickerAdapter(List<StickerListing> stickerListingList,List<ImageList> imgList) {
+    public StickerAdapter(List<StickerListing> stickerListingList,List<List<ImageList>> imgList) {
         this.list=stickerListingList;
         this.imgList = imgList;
     }
@@ -41,9 +41,21 @@ public class StickerAdapter extends RecyclerView.Adapter<StickerAdapter.Viewhold
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
     StickerListing stickerListing=list.get(position);
-   Picasso.get().load(String.valueOf(imgList.get(position).getImagePath())).into(holder.imageView);
-   Picasso.get().load(String.valueOf(imgList.get(position).getImagePath())).into(holder.imageView2);
-   Picasso.get().load(String.valueOf(imgList.get(position).getImagePath())).into(holder.imageView3);
+
+
+   // for(int i=0;i<=2;i++){
+
+        Picasso.get().load(String.valueOf(
+                imgList.get(0).get(0).getImagePath())).into(holder.imageView);
+    Picasso.get().load(String.valueOf(
+                imgList.get(0).get(0).getImagePath())).into(holder.imageView2);
+    Picasso.get().load(String.valueOf(
+                imgList.get(0).get(0).getImagePath())).into(holder.imageView3);
+
+
+
+    //}
+
 
     holder.textView.setText(stickerListing.getCategory());
 
@@ -52,7 +64,6 @@ public class StickerAdapter extends RecyclerView.Adapter<StickerAdapter.Viewhold
     @Override
     public int getItemCount() {
         return list.size();
-
     }
 
     public static class Viewholder extends RecyclerView.ViewHolder {
